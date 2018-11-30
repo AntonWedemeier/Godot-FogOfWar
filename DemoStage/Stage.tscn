@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://DemoStage/Stage.gd" type="Script" id=1]
+[ext_resource path="res://DemoStage/Background.jpg" type="Texture" id=2]
+[ext_resource path="res://DemoStage/icon.png" type="Texture" id=3]
+[ext_resource path="res://DemoStage/Player.gd" type="Script" id=4]
+[ext_resource path="res://FogOfwar/FogOfWar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://DemoStage/Pauseren.gd" type="Script" id=6]
+
+[node name="Stage" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="." index="0"]
+
+position = Vector2( -448, -240 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Player" type="Sprite" parent="." index="1"]
+
+position = Vector2( 512, 300 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="0"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="FogOfWar" parent="." index="2" instance=ExtResource( 5 )]
+
+[node name="Pauseren" type="Node" parent="." index="3"]
+
+pause_mode = 2
+script = ExtResource( 6 )
+_sections_unfolded = [ "Pause" ]
+
+
