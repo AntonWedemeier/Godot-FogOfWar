@@ -22,7 +22,6 @@ var first = true
 
 func _ready():
 	node_FogTexture = $"../../FogTexture"
-	node_FogTexture.material
 	level_start(fog_tex_size, Vector2(1.0, 1.0)) # just to have a start
 	pass
 
@@ -78,7 +77,6 @@ func set_clear_position(clear_position_new):
 
 func _process(delta):
 	set_shader_uniform()
-#	get_tree().paused = true
 
 
 func set_shader_uniform():
