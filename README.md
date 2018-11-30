@@ -30,6 +30,7 @@ The node ‘Fog’ is the node which holds and changes the fog texture. With eve
 Simply add the FogOfWar Scene to the game. It must be low inside the Scene tree because it must be rendered after the play field and player.
 
 The most simple structure could be:
+
     Stage node
         Background node
         FogOfWar Scene
