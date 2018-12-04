@@ -49,7 +49,7 @@ Inside the script of the ‘Fog’ node there are already values for the fog-col
 # Demo
 As a demo I made a Godot project. Downloading the content of this site into an **empty** folder on your computer. Open the project file: project.godot and run the game. The 'player' can be controlled with the arrow keys.
 
-
+![demo screen shot](https://github.com/AntonWedemeier/Godot-FogOfWar/blob/master/demo.png)
 
 
 
