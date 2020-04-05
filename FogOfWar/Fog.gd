@@ -75,6 +75,7 @@ func set_clear_position(clear_position_new):
 	clear_position = clear_position_new
 
 
+# warning-ignore:unused_argument
 func _process(delta):
 	set_shader_uniform()
 
